@@ -1,0 +1,41 @@
+  <div class="card text-dark bg-light mb-3">
+    <div class="card-body">
+      <h5 class="card-title">My Pokemons</h5>
+      <div class="my-2 text-left">
+        <button class="btn btn-rounded btn-primary" type="button" [routerLink] = "['/pokemons/save']">Crear Pokemon</button>
+      </div>
+      <table class="table table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Tipo</th>
+            <th>Habilidades</th>
+            <th>Especial</th>
+            <th>
+              Editar
+            </th>
+            <th>
+              Eliminar
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let pokemones of pokemon">
+          <td>{{pokemones.pokemonId}}</td>
+          <td>{{pokemones.name}}</td>
+          <td>{{pokemones.type}}</td>
+          <td>{{pokemones.abilities}}</td>
+          <td>{{pokemones.specialAbilities}}</td>
+          <td>
+            <button type="button" name="button" [routerLink]="['/pokemons/update',pokemon.pokemonId]" class="btn btn-primary">Editar</button>
+          </td>
+          <td>
+            <button type="button" name="Eliminar" (click)='delete(cliente)' class="btn btn-danger btn-sm">Eliminar</button>
+          </td>
+          </tr>
+        </tbody>
+
+      </table>
+      </div>
+  </div>

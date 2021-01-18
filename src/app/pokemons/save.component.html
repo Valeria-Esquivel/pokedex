@@ -1,0 +1,56 @@
+<div class="card bg-dark text-white">
+  <div class="card-header">   </div>
+    <div class="card-body">
+
+    <form (ngSubmit) = "create()">
+      <div class="form-group row">
+        <label for="pokemonId" class="col-form-label col-sm-2" >ID</label>
+      <div class="col-sm-6">
+        <input type="text" class="form-control" [(ngModel)]="pokemon.pokemonId" name="pokemonId">
+      </div>
+      </div>
+
+      <div class="form-group row">
+        <label for="image" class="col-form-label col-sm-2" >Imagen</label>
+      <div class="col-sm-6">
+        <input type="text" class="form-control" [(ngModel)]="pokemon.image" name="image">
+      </div>
+      </div>
+
+      <div class="form-group row">
+        <label for="name" class="col-form-label col-sm-2" >Nombre</label>
+      <div class="col-sm-6">
+        <input type="text" class="form-control" [(ngModel)]="pokemon.name" name="name">
+      </div>
+      </div>
+
+      <div class="form-group row">
+        <label for="type" class="col-form-label col-sm-2" >Tipo</label>
+      <div class="col-sm-6">
+        <input type="text" class="form-control" [(ngModel)]="pokemon.type" name="type">
+      </div>
+      </div>
+
+      <div class="form-group row">
+        <label for="abilities" class="col-form-label col-sm-2" >Habilidad</label>
+      <div class="col-sm-6">
+        <input type="text" class="form-control"  [(ngModel)]="pokemon.abilities" name="abilities">
+      </div>
+      </div>
+
+      <div class="form-group row">
+        <label for="specialAbilities" class="col-form-label col-sm-2" >Especial</label>
+      <div class="col-sm-6">
+        <input type="text" class="form-control"  [(ngModel)]="pokemon.specialAbilities" name="specialAbilities">
+      </div>
+      </div>
+
+      <div class="form-group row">
+        <div class ="col-sm-6">
+          <button class="btn btn-primary" role="button">Crear</button>
+        </div>
+      </div>
+    </form>
+
+    </div>
+</div>
